@@ -15,3 +15,10 @@ steps:
     repository: $(imageName)
     command: build
     Dockerfile: app/Dockerfile
+- task: JenkinsQueueJob@2
+  inputs:
+    serverEndpoint: 'Jenikns_Siva'
+    jobName: 'java-maven-app'
+    captureConsole: true
+    capturePipeline: true
+    isParameterizedJob: false
