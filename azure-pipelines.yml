@@ -25,4 +25,4 @@ steps:
     action: 'deploy'
     kubernetesServiceConnection: 'KubeSvcConnection'
     namespace: 'KubeTest'
-    manifests: 'Test'
+    manifests: 'drop_kube'
