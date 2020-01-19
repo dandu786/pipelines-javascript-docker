@@ -15,3 +15,9 @@ steps:
     repository: 'Docker'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'KubeSvcConnection'
+    namespace: 'KubeTest'
+    manifests: 'Test'
