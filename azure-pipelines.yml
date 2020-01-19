@@ -15,6 +15,11 @@ steps:
     repository: 'Docker'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop_kube'
+    publishLocation: 'Container'
 - task: KubernetesManifest@0
   inputs:
     action: 'deploy'
