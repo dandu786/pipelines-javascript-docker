@@ -23,6 +23,6 @@ steps:
 - task: KubernetesManifest@0
   inputs:
     action: 'deploy'
-    kubernetesServiceConnection: 'KubeSvcConnection'
+    kubernetesServiceConnection: 'DEV-kubeapp-default-1579707156588'
     namespace: 'KubeTest'
     manifests: 'drop_kube'
